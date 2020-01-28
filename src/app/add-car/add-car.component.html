@@ -1,0 +1,73 @@
+<h1>Add Car</h1>
+<form #myForm="ngForm" (ngSubmit)="addCar(myForm.value)">
+  <table class="table table-bordered table-responsive">
+
+    <tr>
+      <td>Brand</td>
+      <td scope="row">
+
+        <input type="text" class="form-control" ngModel name="Brand" id="Brand" aria-describedby="helpId"
+          placeholder="Brand">
+
+      </td>
+    </tr>
+    <tr>
+      <td>Type</td>
+      <td><input type="text" class="form-control" ngModel name="Type" id="Type" aria-describedby="helpId"
+          placeholder="Type">
+      </td>
+    </tr>
+    <tr>
+      <td>Stock</td>
+      <td>
+        <input type="number" class="form-control" ngModel name="Stock" id="Stock" aria-describedby="helpId"
+          placeholder="Stock">
+      </td>
+    </tr>
+    <tr>
+      <td>Model</td>
+      <td>
+        <input type="text" class="form-control" ngModel name="Model" id="Model" aria-describedby="helpId"
+          placeholder="Model">
+      </td>
+    </tr>
+    <tr>
+        <td>SeatQuantity</td>
+        <td>
+          <input type="number" class="form-control" ngModel name="SeatQuantity" id="SeatQuantity" aria-describedby="helpId"
+            placeholder="SeatQuantity">
+        </td>
+      </tr>
+      <tr>
+        <td>FuelType</td>
+        <td>
+          <input type="text" class="form-control" ngModel name="FuelType" id="FuelType" aria-describedby="helpId"
+            placeholder="FuelType">
+        </td>
+      </tr>
+      <tr>
+        <td>Mileage</td>
+        <td>
+          <input type="number" class="form-control" ngModel name="Mileage" id="Mileage" aria-describedby="helpId"
+            placeholder="Mileage">
+        </td>
+      </tr>
+      <tr>
+        <td>DailyPrice</td>
+        <td>
+          <input type="number" class="form-control" ngModel name="DailyPrice" id="DailyPrice" aria-describedby="helpId"
+            placeholder="DailyPrice">
+        </td>
+      </tr>
+      <tr>
+        <td>ImgSrc</td>
+        <td>
+          <input type="text" class="form-control" ngModel name="ImgSrc" id="ImgSrc" aria-describedby="helpId"
+            placeholder="ImgSrc">
+        </td>
+      </tr>
+    <tr>
+      <td colspan="2" align="center"><button class="btn btn-primary" type="submit">Add Car</button></td>
+    </tr>
+  </table>
+</form>

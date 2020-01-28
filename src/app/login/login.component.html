@@ -1,0 +1,49 @@
+<div class="page login-page">
+  <div class="container d-flex align-items-center">
+    <div class="form-holder has-shadow">
+      <div class="row">
+        <!-- Logo & Information Panel-->
+        <div class="col-lg-6">
+          <div class="info d-flex align-items-center">
+            <div class="content">
+              <div class="logo">
+                <h1>RIDER RENTALS</h1>
+              </div>
+              <p>Please Login to Continue</p>
+            </div>
+          </div>
+        </div>
+        <!-- Form Panel     -->
+        <div class="col-lg-6 bg-white">
+          <div class="form d-flex align-items-center">
+            <div class="content">
+              <form role="form" #myForm="ngForm" (ngSubmit)="Login(myForm.value)" method="post" class="form-validate">
+                <div class="form-group">
+                  <label for="login-username" class="label-material">Email ID</label>
+                  <input ngModel id="EmailId" type="email" required email name="EmailId" class="input-material" #EmailId="ngModel" >
+                  <div *ngIf="EmailId.invalid">
+                  <div *ngIf="EmailId.errors.required">
+                    Email id is required.
+                </div>
+              </div>
+                </div>
+                <div class="form-group">
+                  <label for="login-password" class="label-material">Password</label>
+                  <input ngModel id="Password" type="password" required name="Password" class="input-material" #Password="ngModel">
+                  <div *ngIf="Password.invalid">
+                  <div *ngIf="Password.errors.required">
+                    Password is required.
+                </div>
+              </div>
+                </div>  <button type="submit" [disabled]="!myForm.form.valid" class="btn btn-primary">Login</button><br><br>
+                <!-- <a href="#" (click)="ForgotPassword()" class="forgot-pass">Forgot Password?</a> -->
+                <button (click)="ForgotPassword()" class="btn btn-success">Forgot Password</button>
+                <!-- This should be submit button but I replaced it with <a> for demo purposes-->
+              </form><br><small>Do not have an account? </small><a href="register.html" class="signup">Signup</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

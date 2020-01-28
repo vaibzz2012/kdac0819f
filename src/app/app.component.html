@@ -1,0 +1,82 @@
+<div >
+
+  <nav style="font-size: x-large;font-family: 'Nunito', sans-serif;" style="background-color: black;" class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+      <img src="assets\images\Monogram-RR-Logo-Design-by-Greenlines-Studios.jpg" width="70" height="50" class="d-inline-block align-top" alt="">
+      <!-- <b> RR </b> -->
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <!-- <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/home']" routerLinkActive="router-link-active"  href="#">Home</a>
+        </li>
+
+        
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/about']" routerLinkActive="router-link-active"  href="#">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/contact']" routerLinkActive="router-link-active"  href="#">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="!isUserLoggedIn" [routerLink]="['/register']" routerLinkActive="router-link-active"  href="#">Register</a>
+        </li>
+       
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="isUserLoggedIn" [routerLink]="['/manageprofile']" routerLinkActive="router-link-active"  href="#">Manage Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="isUserLoggedIn" [routerLink]="['/myres']" routerLinkActive="router-link-active"  href="#">My Reservations</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="isUserLoggedIn" [routerLink]="['/feedback']" routerLinkActive="router-link-active"  href="#">Feedback</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="isAdminLoggedIn" [routerLink]="['/dashboard']" routerLinkActive="router-link-active"  href="#">Dashboard</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link"  [routerLink]="['/role']" routerLinkActive="router-link-active"  href="#">Role</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="!isUserLoggedIn" [routerLink]="['/login']" routerLinkActive="router-link-active"  href="#">Login</a>
+        </li> 
+        
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        
+        <button *ngIf="isUserLoggedIn"  class="btn btn-outline-danger my-2 my-sm-0" (click)="Logout()" type="button">Logout</button>
+      </form>
+    </div>
+  </nav>
+</div>
+
+
+<router-outlet></router-outlet>
+<br>
+
+<div class="footer">
+  <h5>Rider Rentals TM 2020</h5>
+  <h6>By Vaibzz</h6>
+
+</div>
+<!-- Footer -->
+<!-- <div style="margin-top: 650px; margin-bottom: auto; background-color: black; color: cornsilk; font-size: x-large;text-align: center;">
+  <label>
+    Rider Rentals
+  </label>
+
+</div> -->
+
+
+<!-- Footer -->
+
+<!-- <app-login></app-login> -->
+

@@ -1,0 +1,38 @@
+<h1>Update User</h1>
+<form #myForm="ngForm" (ngSubmit)="UpdateUser(myForm.value)">
+  <table class="table table-bordered table-responsive">
+
+    <tr>
+      <td>Email</td>
+      <td scope="row">
+
+        <input type="text" class="form-control" [(ngModel)]="EmailId" name="EmailId" id="EmailId" aria-describedby="helpId"
+          placeholder="EmailId">
+
+      </td>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td><input type="text" class="form-control" [(ngModel)]="Name" name="Name" id="Name" aria-describedby="helpId"
+          placeholder="Name">
+      </td>
+    </tr>
+    <tr>
+      <td>Password</td>
+      <td>
+        <input type="text" class="form-control" [(ngModel)]="Password" name="Password" id="Password" aria-describedby="helpId"
+          placeholder="Password">
+      </td>
+    </tr>
+    <tr>
+      <td>Mobile Number</td>
+      <td>
+        <input type="number" class="form-control" [(ngModel)]="MobileNo" name="MobileNo" id="MobileNo" aria-describedby="helpId"
+          placeholder="MobileNo">
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center"><button class="btn btn-primary" type="submit">Add User</button></td>
+    </tr>
+  </table>
+</form>

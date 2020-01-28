@@ -1,0 +1,123 @@
+<h1 class="display-3" style="text-align: center;"> Check Out</h1>
+<table class="tdfont" class="table table-striped">
+        <tbody>
+            <tr>
+                <td colspan="2" >
+                    <table style="text-align: center;" class="table table-hover">
+                       
+                            <tbody>
+                              <tr>
+                                <td><b>CAR'S DAILY RENTAL FEE</b> </td>
+                            </tr>
+                            <tr>
+                              <td> {{dp}} </td>
+                            </tr>
+                            <tr>
+                              <td><b>TOTAL RENT DAYS</b> </td>
+                          </tr>
+                          <tr>
+                            <td> {{diffDays}} </td>
+                          </tr>
+                          
+                          <tr>
+                            <td><b>TOTAL RENT AMOUNT</b> </td>
+                        </tr>
+                        <tr>
+                          <td> {{tr}} </td>
+                        </tr>
+                                <tr>
+                                    <td><b>SECURITY DEPOSIT </b> </td>
+                                </tr>
+                                <tr>
+                                    <td>2000 </td>
+                                </tr>
+                                <tr>
+                                    <td><b>DISCOUNT</b></td>
+                                </tr>
+                                <tr>
+                                    <td>500 </td>
+                                </tr>
+                                <tr>
+                                    <td><b>GRAND TOTAL</b></td>
+                                </tr>
+                                <tr>
+                                    <td>{{gt}}</td>
+                                </tr>
+                            </tbody>
+                    </table>
+                </td>
+                <td></td>
+                <td>
+                    <div class="card">
+                        <img src="{{img}}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" style="font-size: x-large;"><b> {{brand}} </b>   <b> {{model}} </b></h5>
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    
+                                        <div class="card-header" style="font-size: x-large;">
+                                          Start Date
+                                        </div>
+                                        <div class="card-body">
+                                          <h3 class="card-title">{{s | date}}</h3>
+                                          
+                                        </div>
+                                    
+                                </td>
+                                <td>
+                                    <div class="card-header" style="font-size: x-large;">
+                                        End Date
+                                      </div>
+                                      <div class="card-body">
+                                        <h3 class="card-title">{{r | date}}</h3>
+                                        
+                                      </div>
+                                      
+                                </td>
+                            </tr>
+                            
+                            </table>
+                          
+                          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                          <p><button type="button" (click)="CheckOut(diffDays,dp,tr)">Proceed To Payment</button></p>
+                          
+                    
+                        </div>
+                        
+                    </div>
+                    
+                
+                
+                </td>
+            </tr>
+            
+        </tbody>
+</table>
+
+
+
+
+
+  
+<!-- <table class="table table-hover table-inverse table-responsive">
+    <thead class="thead-inverse">
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row"></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td scope="row"></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+</table> -->

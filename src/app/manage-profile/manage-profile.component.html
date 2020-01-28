@@ -1,0 +1,37 @@
+<h1 class="display-3" style="text-align: center;">My Profile</h1>
+<div align="center">
+<a  [routerLink]="['/updateprofile']" routerLinkActive="router-link-active" >Update Profile</a> 
+</div>
+<br><br>
+<div align="center">
+    <form #myForm="ngForm" (ngSubmit)="updateCar(myForm)">
+  
+        <table style="width: 70%;height: 70%;font-size: 50px;">
+    
+            <tr>
+              <td>EmailId</td>
+              <td scope="row">
+                <input readonly [(ngModel)]="car.EmailId" type="text" name="EmailId" class="form-control">
+                
+        
+              </td>
+            </tr>
+            <tr>
+              <td>Name</td>
+              <td><input readonly type="text" class="form-control"  [(ngModel)]="car.Name"   name="Name" id="Name">
+              </td>
+            </tr>
+            <tr>
+              <td>MobileNo</td>
+              <td>
+                <input readonly type="number" class="form-control" [(ngModel)]="car.MobileNo"  name="MobileNo" id="MobileNo">
+              </td>
+            </tr>
+            
+            <!-- <tr>
+              <td colspan="2" align="center"><button class="btn btn-primary" type="submit">Update  Car</button></td>
+            </tr> -->
+          </table>
+    </form>
+    
+</div>

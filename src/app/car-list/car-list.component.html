@@ -1,0 +1,53 @@
+<br><h3 class="display-4"> {{name}} Select Car To Rent</h3>
+<div>
+  <table style="padding-left: 700px;" class="table table-bordered table-inverse table-responsive">
+    <thead class="thead-inverse">
+      <tr>
+        <th>Pickup Date</th>
+        <th>Return Date</th>
+        
+        
+      </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td scope="row" >{{s | date}}</td>
+          <td>{{r | date}}</td>
+          
+        </tr>
+        
+      </tbody>
+  </table>
+</div>
+<!-- <div class="para">
+  <h3>Rider Rentals is a self drive car rental service that provides you with all the privacy, fun and convenience of your own car, without the hassles of owning and maintaining one. We provide self drive car rentals for round-trips, outstation one-way, local one-way and weekly commute trips. We drop and pick-up cars from your doorstep, so that you can spend time on the more important thing - your drive! The doorstep drop and pick-up of cars is our standard way of serving you, and is available throughout the areas served by us.</h3>
+</div> -->
+<div class="para1">
+<h3>For round-trips and local one-way trips, it depends on the pricing plan that you select. If you go for the “Unlimited kms” pricing plans (available only without fuel, and only for bookings whose duration is more than 24 hours), there is absolutely no limit to the kilometres that you can drive, and you have complete flexibility of driving the car as much as you want. Revv it up! Other pricing plans have a "Kilometres limit", which varies based on the plan selected. You can still drive beyond the kilometres limit, but the additional kilometres clocked will attract an additional charge.
+
+  For outstation one-way trips, each route has a fixed “Kilometres limit”, based on the distance between source and destination. You can still drive beyond the kilometres limit, but the additional kilometres clocked will attract an additional charge.
+  
+  For Switch, there is a monthly limit of 2500 Kms. This limit has been designed to ensure that it should suffice for the vast majority of private usage requirements. You can still drive beyond the kilometer limit, but the additional kilometer clocked will attract an additional charge. The Kms will accumulate, on a pro-rata basis, for the period of your subscription (e.g. if you subscribe for 6 months, you will be entitled to 15,000 Kms, beyond which there will be an additional charge per km).</h3>
+</div>
+<div style="padding-left: 1050px;" class="card-group">
+  <form >
+    
+       <table style="text-align: center;"><tr><td> <div *ngFor="let c of cars" class="card" class="card" >
+      <img src="{{c.ImgSrc}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <input hidden value="{{c.CarId}}" type="number" name="CarId" readonly>
+        <h5 class="card-title">{{c.Brand}} {{c.Model}}</h5>
+        <p class="card-text"><b>Type :</b> {{c.Type}} | <b>Seat :</b>  {{c.SeatQuantity}}</p>
+        <p class="card-text"><b>Fuel Type :</b>  {{c.FuelType}} | <b>Price :</b>  {{c.DailyPrice}}</p>
+        <p class="card-text"><small class="text-muted">Mileage : {{c.Mileage}}</small></p>
+        
+        <p><button type="button" (click)="BookNow(c.CarId,c.Brand,c.Model,c.DailyPrice,c.ImgSrc)">BOOK NOW</button></p>
+      </div>
+    </div>
+</td>
+</tr>
+</table>
+  </form>
+</div>
+
+

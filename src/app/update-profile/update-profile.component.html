@@ -1,0 +1,32 @@
+<h1 style="text-align: center;">Update Profile</h1>
+
+<form #myForm="ngForm" (ngSubmit)="updateUser(myForm)">
+  <table class="table table-bordered table-responsive">
+
+    <tr>
+      <td>Email Id</td>
+      <td scope="row">
+        <input  [(ngModel)]="car.EmailId" type="text" name="EmailId" class="form-control">
+        
+
+      </td>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td><input  type="text" class="form-control"  [(ngModel)]="car.Name"   name="Name" id="Name">
+      </td>
+    </tr>
+    <tr>
+      <td>Mobile No</td>
+      <td>
+        <input  type="number" class="form-control" [(ngModel)]="car.MobileNo"  name="MobileNo" id="MobileNo">
+      </td>
+    </tr>
+    
+    <tr>
+      <td colspan="2" align="center"><button class="btn btn-primary" type="submit">Update User</button></td>
+    </tr>
+  </table>
+</form>
+
+

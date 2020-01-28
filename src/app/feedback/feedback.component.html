@@ -1,0 +1,11 @@
+<h1 class="display-3" style="text-align: center;">Feedback</h1>
+<h4>Please share how was your experience with us </h4>
+<div class="container">
+    <form #myForm="ngForm" (ngSubmit)="postfb(myForm.value)">
+  
+      <label for="Message">Message</label>
+      <input type="text" id="Message" ngModel name="Message" placeholder="Your Feedback..">
+      <input type="submit" value="Submit">
+  
+    </form>
+  </div>

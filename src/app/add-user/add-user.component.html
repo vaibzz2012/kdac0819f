@@ -1,0 +1,38 @@
+<h1>Add User</h1>
+<form #myForm="ngForm" (ngSubmit)="addUser(myForm.value)">
+  <table class="table table-bordered table-responsive">
+
+    <tr>
+      <td>Email</td>
+      <td scope="row">
+
+        <input type="text" class="form-control" ngModel name="EmailId" id="EmailId" aria-describedby="helpId"
+          placeholder="EmailId">
+
+      </td>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td><input type="text" class="form-control" ngModel name="Name" id="Name" aria-describedby="helpId"
+          placeholder="Name">
+      </td>
+    </tr>
+    <tr>
+      <td>Password</td>
+      <td>
+        <input type="text" class="form-control" ngModel name="Password" id="Password" aria-describedby="helpId"
+          placeholder="Password">
+      </td>
+    </tr>
+    <tr>
+      <td>Mobile Number</td>
+      <td>
+        <input type="number" class="form-control" ngModel name="MobileNo" id="MobileNo" aria-describedby="helpId"
+          placeholder="MobileNo">
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center"><button class="btn btn-primary" type="submit">Add User</button></td>
+    </tr>
+  </table>
+</form>

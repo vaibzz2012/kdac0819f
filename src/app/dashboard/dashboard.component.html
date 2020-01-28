@@ -1,0 +1,42 @@
+
+<h1 style="text-align: center;" class="display-4">Dashboard</h1>
+<br><br>
+<div class="table-responsive">
+<table class="table table-responsive">
+        <tbody>
+            <tr>
+               
+                <td scope="row"> 
+                
+                    
+                        
+                       
+                        <a routerLink="/dashboard/userlist">UserList</a><br>
+                    
+                
+                        <a routerLink="/dashboard/passlog">Password History Log</a><br>
+                    
+                
+                        <a routerLink="/dashboard/addUser">Add User</a><br>
+                    
+                
+                        <a routerLink="/dashboard/admincarlist">Car List</a><br>
+                    
+                
+                        <a routerLink="/dashboard/reslist">Reservation List</a><br>
+
+
+                        <a routerLink="/dashboard/rentlist">Rent List</a><br>
+
+                        <a routerLink="/dashboard/feedbacklist">Feedback List</a><br>
+                    
+                </td>
+            
+                <td scope="row"> 
+                    <router-outlet></router-outlet>
+                </td>
+            </tr>
+            
+        </tbody>
+</table>
+</div>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Rent List</h1>
+<!-- <a href="/reslist">Add Car</a> -->
+<table  class="table table-striped table-inverse table-responsive">
+    <thead class="thead-inverse">
+        <tr>
+            <th>Rent ID</th>
+            <th>TotalRentDay</th>
+            <th>DailyRentFee</th>
+            <th>Total</th> 
+            <th>Refund</th>
+            <th>CarId</th>
+            <th>ReservationId</th>
+            <th>UserId</th>
+            
+            
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of rentList">
+            <td scope="row">{{c.RentId}}</td>
+            <td>{{c.TotalRentDay}}</td>
+            <td>{{c.DailyRentFee}}</td>
+            <td>{{c.Total}}</td>
+            <td>{{c.Refund}}</td>
+            <td>{{c.CarId}}</td>
+            <td>{{c.ReservationId}}</td>
+            <td>{{c.UserId}}</td>
+            
+           
+        </tr>
+        
+    </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<h1>Update Car</h1>
+<form #myForm="ngForm" (ngSubmit)="updateCar(myForm)">
+  <table class="table table-bordered table-responsive">
+
+    <tr>
+      <td>Brand</td>
+      <td scope="row">
+        <input [(ngModel)]="car.Brand" type="text" name="Brand" class="form-control">
+        
+
+      </td>
+    </tr>
+    <tr>
+      <td>Type</td>
+      <td><input type="text" class="form-control"  [(ngModel)]="car.Type"   name="Type" id="Type">
+      </td>
+    </tr>
+    <tr>
+      <td>Stock</td>
+      <td>
+        <input type="number" class="form-control" [(ngModel)]="car.Stock"  name="Stock" id="Stock">
+      </td>
+    </tr>
+    <tr>
+      <td>Model</td>
+      <td>
+        <input type="text" class="form-control" [(ngModel)]="car.Model" name="Model" id="Model">
+      </td>
+    </tr>
+    <tr>
+        <td>SeatQuantity</td>
+        <td>
+            <input type="number" class="form-control" [(ngModel)]="car.SeatQuantity" name="SeatQuantity" id="SeatQuantity">
+        </td>
+      </tr>
+      <tr>
+        <td>FuelType</td>
+        <td>
+            <input type="text" class="form-control" [(ngModel)]="car.FuelType" name="FuelType" id="FuelType">
+        </td>
+      </tr>
+      <tr>
+        <td>Mileage</td>
+        <td>
+            <input type="number" class="form-control" [(ngModel)]="car.Mileage" name="Mileage" id="Mileage">
+        </td>
+      </tr>
+      <tr>
+        <td>DailyPrice</td>
+        <td>
+            <input type="number" class="form-control" [(ngModel)]="car.DailyPrice" name="DailyPrice" id="DailyPrice">
+        </td>
+      </tr>
+      <tr>
+        <td>ImgSrc</td>
+        <td>
+            <input type="text" class="form-control" [(ngModel)]="car.ImgSrc" name="ImgSrc" id="ImgSrc">
+        </td>
+      </tr>
+    <tr>
+      <td colspan="2" align="center"><button class="btn btn-primary" type="submit">Update  Car</button></td>
+    </tr>
+  </table>
+</form>
